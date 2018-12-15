@@ -1,69 +1,37 @@
-<!doctype HTML>
-
+<!DOCTYPE html>
 <html>
+<head>
+<title>Amen</title>
+</head>	
+
+<body>
+<button onclick="myFunction()">Try it</button>
+<button onclick="myfunction1()">click me</button>
+<button onclick="myfunction3()">try me</button>
+<p id='demo'></p>
+<script>
 
 
-        <head>
+    
+function myFunction() {
+    var str = "hello world";
+    let result = str;
+    document.getElementById('demo').fontWeight='bold'
+    document.getElementById("demo").innerHTML = result;
+}
 
-        <title>css checkpoint</title>
+function myfunction1()  {
+    document.getElementById("demo").style.textDecoration = 'underline';
+}
 
-        <img class="image" src="res/amen.png"width="50%">
+function myfunction2() {
+    document.getElementById("demo").style.fontStyle = 'italic';
+}
 
+function myfunction3(){
+    document.getElementById("demo").style.color ='red'
+}
 
-        <link rel="stylesheet" href="css/style.css">
-
-        </head>
-
-
-        <body>
-
-        <div class="container">
-
-
-        <h1>Articles</h1>
-
-
-
-
-	    <div class="box">
-		<h2>Animi Libero</h2>
-
-		<p1 class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus odio amet laudantium voluptates necessitatibus culpa recusandae adipisci animi libero? adipisicing elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit. Quam accusamus architecto, provident distinctio nobis ea unde.</p1></div>
-
-	
-
-	    <div class="box">
-		<h2>Alias Voluptatibus</h2>
-
-	    <p2 class="a">Adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus odio amet laudantium cumque corrupti dicta nam aut quisquam repellat voluptates necessitatibus culpa recusandae adipisci animi libero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit. Quam accusamus architecto, provident distinctio nobis ea unde.</p2></div>
-	
-
-
-	    <div class="box red">
-		<h2>Aut Quisquam</h2>
-
-	    <p3 class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus odio amet laudantium cumque corrupti dicta nam aut quisquam repellat voluptates necessitatibus culpa recusandae adipisci animi libero? Lorem ipsum dolor consectetur adipisicing 
-	    elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit.</p3></div>
-       
-
-	    <div class="box red">
-		<h2>Consectetur Adipi</h2>
-		<p4 class="a">Lorem adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus odio amet laudantium cumque corrupti dicta nam aut quisquam repellat voluptates necessitatibus culpa recusandae adipisci animi libero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit. Quam accusamus architecto, provident distinctio nobis ea unde.</p4></div>
-
-        <div class="box white">
-        <h2>Maxime Ipsa</h2>
-        <p5 class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus dipisci animi libero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit. Quam accusamus architecto, provident distinctio nobis ea unde.</p5></div>
-
-        <div class="box pink"> 
-        <h2>Dolor Dit Amet</h2>
-        <p6 class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium molestiae commodi, nesciunt voluptatibus odio amet laudantium oluptates necessitatibus culpa recusandae adipisci animi libero? Lorem ipsum dolor sit adipisicing elit. Ratione, repudiandae voluptas! Alias voluptatibus mollitia maxime ipsa. Doloribus magni ducimus assumenda eius reprehenderit. Quam accusamus architecto, provident distinctio nobis ea unde.</p6></div>
-
-
-      </div>
-
-
-
+</script>
 </body>
-
-
 </html>
