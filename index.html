@@ -1,37 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Amen</title>
-</head>	
+<html lang="en">
 
-<body>
-<button onclick="myFunction()">Try it</button>
-<button onclick="myfunction1()">click me</button>
-<button onclick="myfunction3()">try me</button>
-<p id='demo'></p>
+<head>
+
+	<style>
+		#score {
+			font-size: 200px;
+		}
+	</style>
+
+</head>
+
+<body onkeypress="play()">
+
+	<center>
+
+		<audio id="song" src="./song.mp3"></audio>
+		<h1 id="score"> 0 </h1>
+		<button id="9adim" onclick="avance()">9adim</button>
+		<button id="amen"  onclick="reset()"> Reset </button>
+		<button id="wakhir"onclick="wakhir()">9adim bitweli</button>
+
+	</center>
+
+</body>
+<p id="amen"></p>
+
 <script>
 
+	let song = document.getElementById("song");
+	let score = document.getElementById("score");
+	let colors = ["green", "skyblue", "red", "royalblue", "white", "beige", "pink"];
 
-    
-function myFunction() {
-    var str = "hello world";
-    let result = str;
-    document.getElementById('demo').fontWeight='bold'
-    document.getElementById("demo").innerHTML = result;
-}
+	function avance() { song.currentTime += 10; }
+	function wakhir() { song.currentTime -= 10; }
+	function reset () {	score.innerHTML   = 0 ; song.currentTime = 0;}
+	
 
-function myfunction1()  {
-    document.getElementById("demo").style.textDecoration = 'underline';
-}
+	
 
-function myfunction2() {
-    document.getElementById("demo").style.fontStyle = 'italic';
-}
 
-function myfunction3(){
-    document.getElementById("demo").style.color ='red'
-}
+	function play() {
+		console.log("play");
+		document.body.style.backgroundColor = colors[(score.innerHTML % colors.length)];
+		score.innerHTML++;
+		song.play();
+	}
+
+
+	function pause() {
+		song.pause();
+		setInterval(pause, 1000);
+	}
+
+	let person = {
+		name: "moez",
+		profession: "student",
+		age: 16
+	}
+
+	console.log(person.name + " is " + person.age + " " + "years old")
+	console.log(person["name"] + " is " + person["age"] + " " + "years old")
+
+
+	function Person(name, age, profession) {
+		this.name = name;
+		this.age = age;
+		this.profession = profession
+	}
+
+	let myFather = new Person("moez", 16, "teacher");
+	console.log(myFather["name"] + " is " + myFather["age"] + " " + "years old")
+
+
+	let peaks = ["Tallac", "Ralston", "Rose"];
+	let canyons = ["Ward", "Blackwood"];
+	let tahoe = [...peaks, ...canyons];
+	console.log(peaks)
+	console.log(canyons)
+	console.log(tahoe)
+
 
 </script>
-</body>
+
 </html>
