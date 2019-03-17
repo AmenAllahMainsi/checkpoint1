@@ -1,86 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<head>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="amen"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-	<style>
-		#score {
-			font-size: 200px;
-		}
-	</style>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-</head>
-
-<body onkeypress="play()">
-
-	<center>
-
-		<audio id="song" src="./song.mp3"></audio>
-		<h1 id="score"> 0 </h1>
-		<button id="9adim" onclick="avance()">9adim</button>
-		<button id="amen"  onclick="reset()"> Reset </button>
-		<button id="wakhir"onclick="wakhir()">9adim bitweli</button>
-
-	</center>
-
-</body>
-<p id="amen"></p>
-
-<script>
-
-	let song = document.getElementById("song");
-	let score = document.getElementById("score");
-	let colors = ["green", "skyblue", "red", "royalblue", "white", "beige", "pink"];
-
-	function avance() { song.currentTime += 10; }
-	function wakhir() { song.currentTime -= 10; }
-	function reset () {	score.innerHTML   = 0 ; song.currentTime = 0;}
-	
-
-	
-
-
-	function play() {
-		console.log("play");
-		document.body.style.backgroundColor = colors[(score.innerHTML % colors.length)];
-		score.innerHTML++;
-		song.play();
-	}
-
-
-	function pause() {
-		song.pause();
-		setInterval(pause, 1000);
-	}
-
-	let person = {
-		name: "moez",
-		profession: "student",
-		age: 16
-	}
-
-	console.log(person.name + " is " + person.age + " " + "years old")
-	console.log(person["name"] + " is " + person["age"] + " " + "years old")
-
-
-	function Person(name, age, profession) {
-		this.name = name;
-		this.age = age;
-		this.profession = profession
-	}
-
-	let myFather = new Person("moez", 16, "teacher");
-	console.log(myFather["name"] + " is " + myFather["age"] + " " + "years old")
-
-
-	let peaks = ["Tallac", "Ralston", "Rose"];
-	let canyons = ["Ward", "Blackwood"];
-	let tahoe = [...peaks, ...canyons];
-	console.log(peaks)
-	console.log(canyons)
-	console.log(tahoe)
-
-
-</script>
-
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
