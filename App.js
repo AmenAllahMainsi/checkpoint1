@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Box from './components/box';
 import Box2 from './components/box2';
 import Box3 from './components/box3';
@@ -8,12 +7,17 @@ import Box5 from './components/box5';
 import Box7 from './components/box7';
 
 
-class App extends Component {
-  render(){
-     return(  
-        <div className="amen">      
+class App extends Component{
+      render(){
+                const title={color:'black'} 
+                const container={}
 
-              <h1   className="h1">Nos Programmes</h1>
+      return(  
+
+        <div style={container}> 
+
+
+              <h1 style={title}>Nos Programmes</h1>
 
               <center> 
 
@@ -35,13 +39,13 @@ class App extends Component {
 
               <Box5/>
 
-            </center>
-            <Box7></Box7>
-
-        </div>  
-                  
-      );                      
+              </center>
+         
+           <Box7></Box7>
+        
+         </div>             
+       );  
     }                           
  }                   
-
+ 
 export default App;

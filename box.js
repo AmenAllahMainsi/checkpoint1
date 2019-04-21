@@ -2,12 +2,42 @@ import React, {Component} from "react";
 
 class Box extends Component{
 	render() {
+		const title = 	{
+						fontSize: 24,
+						color: 'white',}
+
+		const button = {
+						color:'black',
+						borderColor:'grey', 						
+						borderRadius:12,
+						borderStyle:'solid',
+						fontSize: 20,
+						cursor: 'pointer',
+						display: 'inline-block',
+						fontFamily:'Comic Sans MS'}
+										
+
+		const ktiba = {
+						color:'black',
+						fontFamily:'Comic Sans MS',
+						fontSize: 16,}
+					  
+
+		const box 	= { background:'grey',
+						display:'inline-block',          
+						width: 300, 
+						height: 400,
+						overFlow:'hidden',
+						boxSizing:'border-box',
+						borderStyle:'solid',		
+						}
+				
 		return(
-			<div className="box">
+			<div style={box}>
 					<center>
-                    <h2 className="title">{this.props.title}</h2>				
-                    <p className="des">{this.props.des}</p>	
-					<button className="hello">En savoir plus</button>
+                    <h2 	style ={title}>{this.props.title}</h2>				
+                    <p  	style ={ktiba}>{this.props.des}</p>	
+					<button style ={button}>En savoir plus</button>
 					</center>				
             </div>
     	);
